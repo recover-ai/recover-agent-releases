@@ -22,12 +22,15 @@ beta. Alpha/beta releases are marked *pre-release*.
 ## Install
 
 1. Download `Recover-Agent-Setup-<version>.exe` from the release assets.
-2. Run it (admin rights required). The wizard shows the EULA, then asks for
-   your **API URL** and **tenant** (provided by Recover during onboarding).
-3. Leave "Accept the EULA and enroll this device" ticked on the Finish page —
-   the agent enrolls and goes online automatically.
-4. Launch **Recover Agent** from the desktop or Start menu to open your
-   dashboard window.
+2. Ask a Recover admin for a one-time **enrollment code** (Console → Agent →
+   "Generate enrollment code"; looks like `7K2Q-M9XD-4TPA`, works once,
+   expires after 24 hours).
+3. Run the installer (admin rights). It shows the EULA, then asks for your
+   **API URL** and the **enrollment code** — no tenant field. Upgrading an
+   already-enrolled device? Leave the code empty.
+4. Leave "Accept the EULA and enroll this device" ticked on the Finish page.
+   If enrollment fails, generate a NEW code and run in an admin terminal:
+   `"C:\Program Files\Recover Agent\recover-agent.exe" enroll --code YOUR-CODE`
 
 ## Verify your download
 
